@@ -1,7 +1,10 @@
 import streamlit as st
+from dotenv import load_dotenv
 
 from files import json_read_file
 from transcripts import generate_transcript
+
+load_dotenv()
 
 
 # Streamlit app

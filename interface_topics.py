@@ -16,7 +16,7 @@ def main():
     transcripts = [post["transcript"] for post in data["posts"]]
 
     # Button to trigger transcript generation
-    if st.button("Generate Topics"):
+    if st.button("Generate Topic idea and Transcript for next video"):
         with st.spinner("Generating topic and transcript..."):
             topic, transcript = generate_topic(transcripts)
             st.success("Transcript generated!")

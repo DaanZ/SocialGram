@@ -1,7 +1,7 @@
 import streamlit as st
 
 from files import json_read_file
-from transcripts import generate_transcript, generate_topic
+from transcripts import generate_topic
 
 
 # Streamlit app

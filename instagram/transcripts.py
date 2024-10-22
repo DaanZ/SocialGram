@@ -57,7 +57,8 @@ They are: self (content that provides useful information that can enrich users' 
     topic = llm_chat(history, temperature=1.0)
     history.assistant(topic)
 
-    history.system("Generate a new transcript in line with the tone and personality previously described for the suggested topic: ")
+    history.system("Generate a new transcript in line with the tone and personality previously "
+                   "described for the suggested topic: ")
     transcript = llm_chat(history)
     history.assistant(transcript)
 

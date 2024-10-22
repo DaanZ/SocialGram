@@ -1,3 +1,6 @@
+from dotenv import load_dotenv
+
+load_dotenv()
 
 import streamlit as st
 from langchain_core.documents import Document
@@ -22,7 +25,7 @@ if __name__ == "__main__":
             raise Exception("error")
         pages = [Document(page_content=post["transcript"]) for post in data["posts"]]
         print(len(pages))
-        #history = History()
+        history = History()
         #print("rerun")
         #history.assistant("Hi, I’m Julia. What would you like to know?")
         #print(len(history.logs))

@@ -4,7 +4,7 @@ moviepy
 pydub
 yt-dlp
 faiss-cpu
-streamlit
+streamlit==1.39.0
 rootpath
 openai
 langchain

@@ -22,11 +22,11 @@ if __name__ == "__main__":
             raise Exception("error")
         pages = [Document(page_content=post["transcript"]) for post in data["posts"]]
         print(len(pages))
-        history = History()
-        print("rerun")
-        history.assistant("Hi, I’m Julia. What would you like to know?")
-        print(len(history.logs))
-        streaming_logo_interface(company_name, emoji, history, pages=pages)
+        #history = History()
+        #print("rerun")
+        #history.assistant("Hi, I’m Julia. What would you like to know?")
+        #print(len(history.logs))
+        #streaming_logo_interface(company_name, emoji, history, pages=pages)
     except KeyboardInterrupt:
         print("Program interrupted.")
 

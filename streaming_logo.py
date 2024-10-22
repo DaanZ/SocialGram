@@ -3,8 +3,7 @@ import os
 
 import rootpath
 import streamlit as st
-from langchain_community.vectorstores import FAISS
-from langchain_openai import ChatOpenAI, OpenAIEmbeddings
+from langchain_openai import ChatOpenAI
 
 from llm import History, process_stream, llm_stream
 
@@ -75,17 +74,9 @@ def streaming_logo_interface(company_name: str, history: History, optional: str 
 
             # Stream response
             with st.spinner("Loading..."):
-                if pages:
-                    print("langchain")
-                    db = FAISS.from_documents(pages, OpenAIEmbeddings())
-                    for response in db.similarity_search(user_prompt, k=3):
-                        print("article: " + response.page_content)
-                        st.session_state.history.system(response.page_content)
-                    response_stream = llm_stream(st.session_state.history)
-                else:
-                    response_stream = llm_stream(st.session_state.history)
+                response_stream = llm_stream(st.session_state.history)
                 answers = process_stream(response_stream)
                 chunk = ""
                 for chunk in answers:
-                        assistant_text.markdown(chunk)  # Update progressively
+                    assistant_text.markdown(chunk)  # Update progressively
                 st.session_state.history.assistant(chunk)  # Save final message in history

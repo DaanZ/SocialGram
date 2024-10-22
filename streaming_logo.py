@@ -3,14 +3,11 @@ import os
 
 import rootpath
 import streamlit as st
-from langchain_openai import ChatOpenAI
 
 from llm import History, process_stream, llm_stream
 
-chat = ChatOpenAI(model="gpt-o1")
 
-
-def streaming_logo_interface(company_name: str, history: History, optional: str = "", prompt=None, pages=None, background: str = "background.png"):
+def streaming_logo_interface(company_name: str, history: History, optional: str = "", prompt=None, background: str = "background.png"):
 
     # Function to load image and convert to Base64
     def load_image(image_path):

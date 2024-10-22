@@ -3,7 +3,6 @@ from dotenv import load_dotenv
 load_dotenv()
 
 import streamlit as st
-from langchain_core.documents import Document
 
 from files import json_read_file
 from llm import History

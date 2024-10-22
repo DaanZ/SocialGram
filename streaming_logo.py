@@ -11,15 +11,7 @@ from llm import History, process_stream, llm_stream
 chat = ChatOpenAI(model="gpt-o1")
 
 
-def streaming_logo_interface(company_name: str, emoji: str, history: History, optional: str = "", prompt=None, pages=None, background: str = "background.png"):
-    st.set_page_config(
-        page_title=f"{company_name}",
-        page_icon=emoji,
-        layout="wide",
-    )
-
-    # Main content goes here (e.g., title, text input, etc.)
-    st.title(f"{company_name}")
+def streaming_logo_interface(company_name: str, history: History, optional: str = "", prompt=None, pages=None, background: str = "background.png"):
 
     # Function to load image and convert to Base64
     def load_image(image_path):

@@ -1,5 +1,5 @@
 from files import json_read_file, json_write_file
-from instagram.video_review import extract_audio_from_video, transcribe_audio
+from video_review import extract_audio_from_video, transcribe_audio
 
 video_path = "data/lisaoudijn.json"
 data = json_read_file(video_path)

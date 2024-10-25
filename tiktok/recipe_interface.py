@@ -8,7 +8,7 @@ st.title("Recipe Extraction from Video")
 st.write("Upload a video to extract and transcribe its recipe")
 
 # File uploader widget for video upload
-uploaded_file = st.file_uploader("Choose a video file", type=["mp4"])
+uploaded_file = st.file_uploader("Choose a video file", type=["mp4", "mov"])
 
 if uploaded_file is not None:
     # Define paths for the uploaded video and output files

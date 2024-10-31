@@ -13,8 +13,12 @@ uploaded_file = st.file_uploader("Choose a video file", type=["mp4", "mov"])
 if uploaded_file is not None:
     # Define paths for the uploaded video and output files
     video_path = f"data/{uploaded_file.name}"
-    audio_path = video_path.replace(".mp4", ".mp3")
-    json_path = video_path.replace(".mp4", ".json")
+    if "mp4" in video_path:
+        audio_path = video_path.replace(".mp4", ".mp3")
+        json_path = video_path.replace(".mp4", ".json")
+    else:
+        audio_path = video_path.replace(".mov", ".mp3")
+        json_path = video_path.replace(".mov", ".json")
 
     # Save the uploaded video file
     with open(video_path, "wb") as f:

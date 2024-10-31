@@ -8,3 +8,4 @@ chromedriver.exe
 *.mp4
 *.mp4
 *.html
+/data

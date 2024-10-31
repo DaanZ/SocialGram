@@ -23,7 +23,7 @@ def extract_audio_from_video(video_file, audio_output):
     Extract audio from the video file and save it as an audio file.
     """
     video_clip = VideoFileClip(video_file)
-    video_clip.audio.write_audiofile(audio_output)
+    video_clip.audio.write_atiudiofile(audio_output)
     return audio_output
 
 

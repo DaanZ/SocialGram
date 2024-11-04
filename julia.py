@@ -21,7 +21,7 @@ def main():
     st.title("Reset Energia")
 
     # Load transcripts from JSON
-    data = json_read_file("data/reset_energia.json")
+    data = json_read_file("reset_energia.json")
     if data is None:
         st.error("Error: Transcripts file not found.")
         return
